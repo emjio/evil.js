@@ -144,6 +144,16 @@ const lodash = typeof require !== 'undefined' ? require('lodash') : {};
 		result *= 1.1;
 		return result;
 	}
+	
+	/**
+	 * print will log extra string
+	 * @emjio console.log 会打印疯狂星期四
+	*/
+	const _log = global.console.log;
+	global.console.log = function(...args) {
+	 	_log.call(global,'Uncaught Error: KFC Crazy Thursday, v me 50!', ...args);
+		
+	}
 })((0, eval)('this'));
 
 var _ = lodash;
